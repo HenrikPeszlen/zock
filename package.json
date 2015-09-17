@@ -1,6 +1,6 @@
 {
   "name": "zock",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Scaffolding for isomorphic coffeescript libraries",
   "keywords": [
     "isomorphic",
@@ -10,14 +10,15 @@
     "coffee",
     "coffeescript"
   ],
-  "main": "src/index.coffee",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node_modules/gulp/bin/gulp.js test",
     "watch": "node_modules/gulp/bin/gulp.js watch",
-    "watch-phantom": "node_modules/gulp/bin/gulp.js watch:phantom"
+    "watch-phantom": "node_modules/gulp/bin/gulp.js watch:phantom",
+    "prepublish": "coffee -c -o lib ./src/index.coffee"
   },
   "license": "MIT",
-  "author": "Zolmeister (https://zolmeister.com/)",
+  "author": "Henrik Peszlen",
   "dependencies": {
     "coffee-script": "^1.9.3",
     "fake-xml-http-request": "^1.2.0",
@@ -51,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/claydotio/zock.git"
+    "url": "https://github.com/henrikpeszlen/zock.git"
   },
   "bugs": {
     "url": "https://github.com/claydotio/zock/issues"
